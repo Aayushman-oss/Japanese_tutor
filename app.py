@@ -38,7 +38,7 @@ with st.sidebar:
 def get_gemini_response(prompt, system_instruction=None):
     """Fetches response from Gemini."""
     model = genai.GenerativeModel(
-        model_name='gemini-1.5-flash',
+        model_name='gemini-2.5-flash',  # <--- UPDATE THIS LINE
         system_instruction=system_instruction
     )
     response = model.generate_content(prompt)
